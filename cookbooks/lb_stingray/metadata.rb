@@ -10,7 +10,6 @@ version          "13.3.0"
 # supports "ubuntu", "~> 10.04", "~> 12.04"
 
 depends "rightscale"
-depends "app"
 depends "lb"
 
 recipe "lb_stingray::default", "This loads the required 'lb' resource using the
