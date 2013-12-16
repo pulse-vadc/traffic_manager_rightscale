@@ -9,8 +9,8 @@ version          "13.3.0"
 # supports "redhat", "~> 5.8"
 # supports "ubuntu", "~> 10.04", "~> 12.04"
 
-#depends "rightscale"
-#depends "lb"
+depends "rightscale"
+depends "lb"
 
 recipe "lb_stingray::default", "This loads the required 'lb' resource using the
 Stingray provider."
