@@ -57,12 +57,22 @@ action :install do
     end
 
     # Replay file for non-interactive installation of Stingray.
-    template "/tmp/install_replay" do
-        not_if { ::File.exists?("/opt/riverbed/zxtm") }
-        cookbook "lb_stingray"
-        mode "0644"
-        source "install.erb"
-        variables( :accept_license => "accept", :path => "/opt/riverbed" )
+    if node["cloud"]["provider"] == "ec2" then
+        template "/tmp/install_replay" do
+            not_if { ::File.exists?("/opt/riverbed/zxtm") }
+            cookbook "lb_stingray"
+            mode "0644"
+            source "install_ec2.erb"
+            variables( :accept_license => "accept", :path => "/opt/riverbed" )
+        end
+    else
+        template "/tmp/install_replay" do
+            not_if { ::File.exists?("/opt/riverbed/zxtm") }
+            cookbook "lb_stingray"
+            mode "0644"
+            source "install.erb"
+            variables( :accept_license => "accept", :path => "/opt/riverbed", :ip_address => node[:ipaddress])
+        end
     end
 
     # Unpack tarball and install software package
