@@ -73,7 +73,7 @@ action :install do
             cookbook "lb_stingray"
             mode "0644"
             source "install.erb"
-            variables( :accept_license => "accept", :path => "/opt/riverbed", :ip_address => node[:ipaddress])
+            variables( :accept_license => "accept", :path => "/opt/riverbed", :ip_address => node[:ipaddress], :password => node[:lb_stingray][:password])
         end
     end
 
