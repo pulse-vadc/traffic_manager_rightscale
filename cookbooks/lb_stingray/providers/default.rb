@@ -58,6 +58,7 @@ action :install do
 
     # Replay file for non-interactive installation of Stingray.
     if node["cloud"]["provider"] == "ec2" then
+        log "--> Chosing replay file for EC2..."
         template "/tmp/install_replay" do
             not_if { ::File.exists?("/opt/riverbed/zxtm") }
             cookbook "lb_stingray"
@@ -66,6 +67,7 @@ action :install do
             variables( :accept_license => "accept", :path => "/opt/riverbed" )
         end
     else
+        log "--> Chosing replay file for non-EC2... IP address is #{node[:ipaddress]}"
         template "/tmp/install_replay" do
             not_if { ::File.exists?("/opt/riverbed/zxtm") }
             cookbook "lb_stingray"
