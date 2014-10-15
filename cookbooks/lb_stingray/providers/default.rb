@@ -64,7 +64,7 @@ action :install do
             cookbook "lb_stingray"
             mode "0644"
             source "install_ec2.erb"
-            variables( :accept_license => "accept", :path => "/opt/riverbed" )
+            variables( :accept_license => "accept", :path => "/opt/riverbed", :password => node[:lb_stingray][:password] )
         end
     else
         log "--> Chosing replay file for non-EC2... IP address is #{node[:ipaddress]}"
