@@ -1,9 +1,9 @@
-# Brocade SteelApp Traffic Manager on RightScale Cookbook
+# Riverbed SteelApp Traffic Manager on RightScale Cookbook
 
 # Details
 
 This cookbook provides integration between RightScale's LB interface and
-Brocade SteelApp Traffic Manager.  It handles all of the installation and
+Riverbed SteelApp Traffic Manager.  It handles all of the installation and
 provides recipes/actions for attaching and detaching application servers
 according to the "Infinity" lineage of RightScale's ServerTemplates.
 

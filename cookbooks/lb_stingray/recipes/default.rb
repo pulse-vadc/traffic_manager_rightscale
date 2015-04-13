@@ -13,7 +13,7 @@ class Chef::Recipe
    include RightScale::App::Helper
 end
 
-log "Override load balancer to use Riverbed Stingray."
+log "Override load balancer to use Riverbed SteelApp."
 node[:lb][:service][:provider] = "lb_stingray"
 
 if node[:lb][:pools] != ""

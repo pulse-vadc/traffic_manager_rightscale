@@ -1,6 +1,6 @@
 maintainer       "Brocade Communications, Inc."
 maintainer_email "mgeldert@brocade.com"
-license          "Copyright Brocade, Inc. All rights reserved."
+license          "Copyright Riverbed, Inc. All rights reserved."
 description      "Installs/Configures lb_stingray"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "13.3.9"
