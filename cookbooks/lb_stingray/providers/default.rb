@@ -14,7 +14,7 @@ action :install do
 
 
     # Check to ensure we've received a valid version number and bail out if not.
-    if not full_version =~ /^[01]{0,1}[1-9]\.[0-9](r[1-9]){0,1}$/
+    if not full_version =~ /^[01]{0,1}[0-9]\.[0-9](r[1-9]){0,1}$/
         raise "An invalid version number was provided. Installation aborted."
     end 
 

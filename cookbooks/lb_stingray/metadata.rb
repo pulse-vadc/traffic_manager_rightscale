@@ -3,7 +3,7 @@ maintainer_email "mgeldert@brocade.com"
 license          "Copyright Riverbed, Inc. All rights reserved."
 description      "Installs/Configures lb_stingray"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.3.9"
+version          "13.3.10"
 
 # supports "centos", "~> 5.8", "~> 6"
 # supports "redhat", "~> 5.8"
