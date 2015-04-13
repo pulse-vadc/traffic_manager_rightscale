@@ -1,9 +1,9 @@
-# Riverbed Stingray Traffic Manager on RightScale Cookbook
+# Brocade SteelApp Traffic Manager on RightScale Cookbook
 
 # Details
 
 This cookbook provides integration between RightScale's LB interface and
-Riverbed Stingray Traffic Manager.  It handles all of the installation and
+Brocade SteelApp Traffic Manager.  It handles all of the installation and
 provides recipes/actions for attaching and detaching application servers
 according to the "Infinity" lineage of RightScale's ServerTemplates.
 
@@ -60,11 +60,6 @@ converge.
 
 This parameter is not meant to be changed by the end user.  It selects a version
 of the software to install and is only present to avoid cookbook duplication.
-
-#### lb\_stingray/path\_hash
-
-This parameter is not meant to be changed by the end user.  It contains an MD5 
-hash included in the software download path.
 
 #### lb\_stingray/java\_enabled
 

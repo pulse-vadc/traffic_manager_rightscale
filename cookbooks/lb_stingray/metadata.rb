@@ -1,9 +1,9 @@
-maintainer       "Riverbed Technology, Inc."
-maintainer_email "mgeldert@riverbed.com"
-license          "Copyright Riverbed, Inc. All rights reserved."
+maintainer       "Brocade Communications, Inc."
+maintainer_email "mgeldert@brocade.com"
+license          "Copyright Brocade, Inc. All rights reserved."
 description      "Installs/Configures lb_stingray"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.3.8"
+version          "13.3.9"
 
 # supports "centos", "~> 5.8", "~> 6"
 # supports "redhat", "~> 5.8"
@@ -28,13 +28,6 @@ enabled.  A JRE must be installed on the host in order for this to function.",
 attribute 'lb_stingray/software_version',
 :display_name => "Software Version",
 :description => "Software version to install (eg. 9.0r1 or 9.1). DO NOT CHANGE THIS VALUE.",
-:required => "required",
-:type => "string",
-:recipes => ["lb_stingray::default"]
-
-attribute 'lb_stingray/path_hash',
-:display_name => "Path Hash",
-:description => "MD5 hash included in path of software binary to install. DO NOT CHANGE THIS VALUE.",
 :required => "required",
 :type => "string",
 :recipes => ["lb_stingray::default"]
